@@ -1,5 +1,5 @@
 #!/bin/bash
 #
-echo "Mart Enel"
-echo "IS118"
-echo "Mulle meeldib skriptimine"
+echo "Mart Enel" #ütleb minu nime
+echo "IS118"	#ütleb minu grupi
+echo "Mulle meeldib skriptimine"	#ütleb kas mulle meeldib skriptimine
