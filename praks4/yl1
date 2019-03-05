@@ -1,0 +1,6 @@
+#!/bin/bash
+#
+# tere tulemast skript
+echo "Sisesta oma ees- ja perenimi:" #küsib ees ja perenime
+read sinunimi #loeb kirjutatut
+echo "Tere tulemast, $sinunimi" #trükib sisestatu
