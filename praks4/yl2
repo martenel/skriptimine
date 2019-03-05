@@ -16,7 +16,9 @@ read kogus
 kandik=$(expr "$pikkus" \* "$laius") #arvutab kandiku suuruse
 kypsis=$(expr "$kpikkus" \* "$klaius") #arvutab küpsise suuruse
 kk=$(expr "$kandik" / "$kypsis") #jagab kandiku ja küpise suuruse
+ss=$(expr "$kandik" % "$kypsis") #leiab kandiku ja küpsise jäägi
 kuhid=$(expr "$kk" \* "$kihid") #küpsise ja kandiku jagatise korrutab kihtidearvuga
 kokku=$(expr "$kuhid" / "$kogus") # arvutab koguse kokku
 echo "Teil läheb vaja $kokku pakki küpsiseid" #prindib koguse arvu koos tekstiga
+echo "Kui see number on suurem kui 0, siis tuleb osta üks pakk lisaks: $ss"
 
