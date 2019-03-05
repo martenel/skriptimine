@@ -1,0 +1,22 @@
+#!/bin/bash
+#
+#tordi skript
+echo -n "Sisestage kandiku pikkus sentimeetrites:"
+read pikkus
+echo -n "Sisestage kandiku laius sentimeetrites:"
+read laius
+echo -n "Sisestage küpsise pikkus sentimeetrites:"
+read kpikkus
+echo -n "Sisestage küpsise laius sentimeetrites:"
+read klaius
+echo -n "Sisestage tordi kihtide arv:"
+read kihid
+echo -n "Sisestage küpsise arv ühes pakis:"
+read kogus
+kandik=$(expr "$pikkus" \* "$laius") #arvutab kandiku suuruse
+kypsis=$(expr "$kpikkus" \* "$klaius") #arvutab küpsise suuruse
+kk=$(expr "$kandik" / "$kypsis") #jagab kandiku ja küpise suuruse
+kuhid=$(expr "$kk" \* "$kihid") #küpsise ja kandiku jagatise korrutab kihtidearvuga
+kokku=$(expr "$kuhid" / "$kogus") # arvutab koguse kokku
+echo "Teil läheb vaja $kokku pakki küpsiseid" #prindib koguse arvu koos tekstiga
+
