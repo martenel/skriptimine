@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+#bussi skript
+echo -n "Mitu reisijat on grupis?:"
+read inimesed
+echo -n "Mitu kohta on bussis?:"
+read buss
+busse=$(expr "$inimesed" / "$buss") #arvutab busside arvu mitu saab täielikult täidetud
+maha=$(expr "$inimesed" % "$buss") #arvutab inimeste arvu mitu jääb maha
+echo "Täielikult täidetud busse on $busse ja maha jääb $maha inimest" #trükib vastuse
