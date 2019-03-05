@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+# masina tööloleku skript
+echo -n $(hostname)
+echo " "$(uptime | awk '{print $1}') $(uptime -p)
