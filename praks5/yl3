@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#
+echo "Pühapäev - 0, Esmaspäev - 1,..., Laupäev - 6"
+echo ""
+echo -n "Sisesta millal sõidad ära: "
+read paev
+echo -n "Sisesta reisi ööpäevade arv: "
+read aeg
+plus=$(echo "$paev + $aeg" | bc) #liitsin kokku
+vastus=$(echo "$plus % 7" | bc) #leidsin jäägi
+echo "Tagasi oled päeval number $vastus"
