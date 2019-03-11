@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#
+echo -n "Sisesta a kylje vaartus:"
+read a
+echo -n "Sisesta b kylje vaartus:"
+read b
+echo -n "Sisesta c kylje vaartus:"
+read c
+ymber=$(echo "scale=3;($a+$b+$c)/2" | bc)
+aa=$(echo "$ymber-$a" | bc)
+bb=$(echo "$ymber-$b" | bc)
+cc=$(echo "$ymber-$c" | bc)
+korda=$(echo "$ymber*$aa*$bb*$cc" | bc)
+vastus=$(echo "scale=3;sqrt($korda)" | bc)
+echo "$vastus"
+
