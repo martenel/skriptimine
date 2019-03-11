@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+#kolmnurga arvuamine
+echo -n "Sisesta a kylje vaartus:"
+read kylga
+echo -n "Sisesta b kylje vaartus:"
+read kylgb
+pool=$(echo "$kylga^2" | bc) #esimese külje panen ruutu
+pool2=$(echo "$kylgb^2" | bc) #teise külje panen ruutu
+kokku=$(echo "$pool+$pool2" | bc) #liidan küljed kokku
+vastus=$(echo "scale=3;sqrt($kokku)" | bc) #võtan ruutjuure
+echo "$vastus"
