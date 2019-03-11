@@ -13,5 +13,5 @@ bb=$(echo "$ymber-$b" | bc) #ümbermõõt miinus külg
 cc=$(echo "$ymber-$c" | bc)
 korda=$(echo "$ymber*$aa*$bb*$cc" | bc) #korrutasin kõik
 vastus=$(echo "scale=3;sqrt($korda)" | bc) #arvutasin vastuse
-echo "$vastus"
+echo "Pindala = $vastus"
 
