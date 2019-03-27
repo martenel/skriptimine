@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+#
+exec 2>/dev/null
+jaak=$( expr "$1" % 2 )
+if [ "$jaak" -eq "0" ]; then
+	echo "Antud arv on paaris"
+elif [ "$1" != "" ]; then
+	echo "Antud arv on paaritu"
+else
+	echo "Unustasite sisestada arvu käsureale"
+fi
+
