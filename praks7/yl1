@@ -1,0 +1,16 @@
+#!/bin/bash
+#
+#
+echo -n "Sisesta (oma) vanus: "
+read vanus
+if [ $vanus -lt 0 ]; then
+	echo "Sisestasite vale arvu"
+elif [ $vanus -le 11 ]; then
+	echo "Oled laps"
+elif [ $vanus -le 17 ]; then
+	echo "Oled nooruk"
+elif [ $vanus -le 63 ]; then
+	echo "Oled täiskasvanu"
+else
+	echo "Oled senjoor"
+fi
