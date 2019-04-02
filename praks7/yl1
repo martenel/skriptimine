@@ -1,16 +1,16 @@
 #!/bin/bash
 #
 #
-echo -n "Sisesta (oma) vanus: "
-read vanus
-if [ $vanus -lt 0 ]; then
+echo -n "Sisesta (oma) vanus: " #küsib vanust
+read vanus #loeb vanust
+if [ $vanus -lt 0 ]; then #kui arv on negatiivne siis ütleb et sisestasite vale arvu
 	echo "Sisestasite vale arvu"
-elif [ $vanus -le 11 ]; then
+elif [ $vanus -le 11 ]; then #kui arv on väiksem võrdne 11-ga ütleb et oled laps
 	echo "Oled laps"
-elif [ $vanus -le 17 ]; then
+elif [ $vanus -le 17 ]; then #kui arv on väiksem võrdne 17-ga ütleb et oled nooruk
 	echo "Oled nooruk"
-elif [ $vanus -le 63 ]; then
+elif [ $vanus -le 63 ]; then #kui arv on väiksem võrdne 63-ga ütleb et oled täiskasvanu
 	echo "Oled täiskasvanu"
-else
+else #kui arv on üle 63 ütleb et oled senjoor
 	echo "Oled senjoor"
 fi
