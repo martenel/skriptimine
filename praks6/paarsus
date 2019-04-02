@@ -1,13 +1,11 @@
 #!/bin/bash
 #
 #
-exec 2>/dev/null
-jaak=$( expr "$1" % 2 )
-if [ "$jaak" -eq "0" ]; then
-	echo "Antud arv on paaris"
-elif [ "$1" != "" ]; then
-	echo "Antud arv on paaritu"
-else
+jaak=$( expr $1 % 2 )
+if [ -z "$1" ]; then #kui ei sisestatud midagi siis võtab seda tõesena ja vasab ei unustasite sisestada arvu käsureale
 	echo "Unustasite sisestada arvu käsureale"
+elif [ "$jaak" -eq "0" ]; then #kui tehtel ei jää jääki siis vastab et antud arv on paaris
+	echo "Antud arv on paaris"
+else #kui tehtel jääb jääk siis vastab et antud arv on paaritu
+	echo "Antud arv on paaritu"
 fi
-
