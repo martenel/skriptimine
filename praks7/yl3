@@ -9,7 +9,7 @@ elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then #kui arv on vahemikus 12-18 ütleb ter
 	echo "Tere päevast"
 elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then #kui arv on vahemikus 18-22 ütlev tere õhtust
 	echo "Tere õhtust"
-elif [ $aeg -ge 22 -a $aeg -lt 24 -o $aeg -ge 0 -a $aeg -lt 6 ]; then #kui arv on vahemikus 22-24 või 0-6 ütleb head ööd
+elif [ $aeg -ge 22 -a $aeg -le 24 -o $aeg -ge 0 -a $aeg -lt 6 ]; then #kui arv on vahemikus 22-24 või 0-6 ütleb head ööd
 	echo "Head ööd"
 else #kui arv ei kuulu ühtegi vahmikku ütleb sisestasite vale arvu
 	echo "Sisestasite vale arvu"
