@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+#
+aeg=$(date +%H) #leiab täistunni
+if [ $aeg -ge 6 -a $aeg -lt 12 ]; then #kui arv on vahemikus 6-12 ütleb tere hommikust
+	echo "Tere hommikust, $(hostname)"
+elif [ $aeg -ge 12 -a $aeg -lt 18 ]; then #kui arv on vahemikus 12-18 ütleb tere päevast
+	echo "Tere päevast, $(hostname)"
+elif [ $aeg -ge 18 -a $aeg -lt 22 ]; then #kui arv on vahemikus 18-22 ütlev tere õhtust
+	echo "Tere õhtust, $(hostname)"
+elif [ $aeg -ge 22 -a $aeg -le 24 -o $aeg -ge 0 -a $aeg -lt 6 ]; then #kui arv on vahemikus 22-24 või 0-6 ütleb head ööd
+	echo "Head ööd, $(hostname)"
+else #kui arv ei kuulu ühtegi vahmikku ütleb sisestasite vale arvu
+	echo "Sisestasite vale arvu"
+fi
