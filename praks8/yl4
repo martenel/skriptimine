@@ -1,0 +1,21 @@
+#!/bin/bash
+#
+#
+echo -n "Sisesta suvaline algarv: "
+read algarv #loeb sisestatud arvu
+if [ $algarv -eq 0 -o $algarv -eq 1 ]; then #kui sisestatud arv võrdub 0-ga või 1-ga ütleb et see ei ole algarv, sest 0 ja 1 ei ole algarvud ega kordarvud
+	echo "$algarv ei ole algarv"
+else
+	jagaja=2 #jagaja võrdub 2
+	jaak=$(( $algarv % $jagaja )) #sisestatud arv jagatakse jagajaga, ehk 2-ga
+	while [ $jaak -ne 0 ] #siis kui jääl ei võrdu 0-ga
+	do
+		jagaja=$(( $jagaja + 1 )) #jagajale liidetakse 1 juurde
+		jaak=$(( $algarv % $jagaja )) #sisestatud arv ja jagaja jagatakse omavahel ning leitakse kas on jääk
+	done
+	if [ $algarv -eq $jagaja ]; then # kui sisestatud arv on võrdne jagajaga siis ütleb et see on algarv
+		echo "$algarv on algarv"
+	else #kui sisestatud arv ei ole võrdne jagajaga siis ütleb et see ei ole algarv
+		echo "$algarv ei ole algarv"
+	fi
+fi
