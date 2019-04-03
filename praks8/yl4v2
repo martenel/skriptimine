@@ -1,11 +1,11 @@
 #!/bin/bash
 #
 #
-for (( algarv=1; algarv<21; algarv++ )) 
+for (( algarv=1; algarv<21; algarv++ )) #alustab 1-st, lõpetab 20-ga ja liidab 1 juurde
 do
 
-if [ $algarv -eq 0 -o $algarv -eq 1 ]; then
-	echo "$algarv ei ole algarv"
+if [ $algarv -eq 0 -o $algarv -eq 1 ]; then #kui arv võrdub 0 või 1 siis ütleb et see ei ole algarv ega kordarv
+	echo "$algarv ei ole algarv ega kordarv"
 else
 	jagaja=2 #jagaja võrdub 2
 	jaak=$(( $algarv % $jagaja )) #sisestatud arv jagatakse jagajaga, ehk 2-ga
@@ -21,4 +21,4 @@ else
 	fi
 fi
 done
-echo "$algarv"
+
