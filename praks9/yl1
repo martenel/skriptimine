@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+#
+for (( a=1; a<=5; a++ )) #arvutab ridade arvu
+do
+	for(( b=1; b<=5; b++ )) #arvutab märkide arvu reas
+	do
+		echo -n "* " #väljastab * mitu korda ja mitu rida on märgitud
+	done
+echo "" #tühi rida
+done
