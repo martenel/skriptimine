@@ -1,0 +1,17 @@
+#!/bin/bash
+#
+#
+echo -n "Sisesta ridade arv: "
+read rida
+for (( a=1; a<=$rida; a++ )) #arvutab ridade arvu
+do
+	for(( b=1; b<=$rida; b++ )) #arvutab märkide arvu reas
+	do
+if [ $a -ge $b ]; then #kui a on võrdne b-ga siis liidab ühe ja..
+		echo -n "* " #väljastab * mitu korda ja mitu rida on märgitud
+else
+echo -n " "
+fi
+	done
+echo "" #tühi rida
+done
