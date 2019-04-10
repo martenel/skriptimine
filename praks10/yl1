@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+#
+while :
+do
+echo "Et tühistada regristreerimine või ei soovi rohkem kasutajasid luua, siis
+ vajutage Ctrl+c"
+echo -n "Sisesta kasutajanimi: "
+read kasutajanimi
+egrep "^$kasutajanimi" /etc/passwd >/dev/null
+if [ $? -eq 0 ]; then
+	echo -e "kasutajanimi on juba olemas"
+	exit
+else
+
+echo -n "Loo endale parool: "
+read parool
+echo -n "Sisestage grupp(opilased/opetajad): "
+read grupp
+if grep -q $grupp /etc/group
+then
+useradd -g $grupp -d /home/$kasutajanimi -s /bin/bash -m $kasutajanimi
+echo "$kasutajanimi:$parool" | chpasswd
+echo -e "kasutajanimi on: $kasutajanimi"
+echo -e "Parool on $parool"
+echo -e "Grupp on: $grupp"
+echo -e "Kodukataloog on: /home/$kasutajanimi"
+else
+echo "Vale sisend"
+fi
+fi
+done
